@@ -1,7 +1,7 @@
 ﻿
 namespace CSharp_HomeWork
 {
-    partial class Form1
+    partial class Homework01
     {
         /// <summary>
         /// 設計工具所需的變數。
