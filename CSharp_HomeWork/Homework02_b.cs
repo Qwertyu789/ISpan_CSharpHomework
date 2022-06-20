@@ -16,5 +16,16 @@ namespace CSharp_HomeWork
         {
             InitializeComponent();
         }
+
+        
+
+        private void Homework02_b_Load(object sender, EventArgs e)
+        {
+            Homework02_a hwa = new Homework02_a();
+            hwa.Monthpay();
+            Label lab6 = label6;
+            
+            //lab6.Text = 
+        }
     }
 }
