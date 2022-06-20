@@ -40,7 +40,6 @@ namespace CSharp_HomeWork
             this.PMTBut = new System.Windows.Forms.Button();
             this.TotalPayBut = new System.Windows.Forms.Button();
             this.ReportBut = new System.Windows.Forms.Button();
-            this.FortestBut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TargetLB01
@@ -89,6 +88,7 @@ namespace CSharp_HomeWork
             this.TargetTB01.Name = "TargetTB01";
             this.TargetTB01.Size = new System.Drawing.Size(189, 22);
             this.TargetTB01.TabIndex = 8;
+            this.TargetTB01.Text = "100000";
             // 
             // TimelimitTB01
             // 
@@ -96,6 +96,7 @@ namespace CSharp_HomeWork
             this.TimelimitTB01.Name = "TimelimitTB01";
             this.TimelimitTB01.Size = new System.Drawing.Size(189, 22);
             this.TimelimitTB01.TabIndex = 9;
+            this.TimelimitTB01.Text = "2";
             // 
             // RateTB01
             // 
@@ -103,6 +104,7 @@ namespace CSharp_HomeWork
             this.RateTB01.Name = "RateTB01";
             this.RateTB01.Size = new System.Drawing.Size(189, 22);
             this.RateTB01.TabIndex = 10;
+            this.RateTB01.Text = "10";
             // 
             // DPTB
             // 
@@ -110,6 +112,7 @@ namespace CSharp_HomeWork
             this.DPTB.Name = "DPTB";
             this.DPTB.Size = new System.Drawing.Size(189, 22);
             this.DPTB.TabIndex = 11;
+            this.DPTB.Text = "0";
             // 
             // PMTBut
             // 
@@ -131,6 +134,7 @@ namespace CSharp_HomeWork
             this.TotalPayBut.TabIndex = 13;
             this.TotalPayBut.Text = "總金額";
             this.TotalPayBut.UseVisualStyleBackColor = true;
+            this.TotalPayBut.Click += new System.EventHandler(this.TotalPayBut_Click);
             // 
             // ReportBut
             // 
@@ -141,23 +145,13 @@ namespace CSharp_HomeWork
             this.ReportBut.TabIndex = 14;
             this.ReportBut.Text = "報告";
             this.ReportBut.UseVisualStyleBackColor = true;
-            // 
-            // FortestBut
-            // 
-            this.FortestBut.Location = new System.Drawing.Point(137, 244);
-            this.FortestBut.Name = "FortestBut";
-            this.FortestBut.Size = new System.Drawing.Size(121, 35);
-            this.FortestBut.TabIndex = 15;
-            this.FortestBut.Text = "Fortest";
-            this.FortestBut.UseVisualStyleBackColor = true;
- // todo          this.FortestBut.Click += new System.EventHandler(this.FortestBut_Click);
+            this.ReportBut.Click += new System.EventHandler(this.ReportBut_Click);
             // 
             // Homework02_a
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(649, 362);
-            this.Controls.Add(this.FortestBut);
             this.Controls.Add(this.ReportBut);
             this.Controls.Add(this.TotalPayBut);
             this.Controls.Add(this.PMTBut);
@@ -189,6 +183,5 @@ namespace CSharp_HomeWork
         private System.Windows.Forms.Button PMTBut;
         private System.Windows.Forms.Button TotalPayBut;
         private System.Windows.Forms.Button ReportBut;
-        private System.Windows.Forms.Button FortestBut;
     }
 }
