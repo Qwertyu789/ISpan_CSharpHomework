@@ -12,19 +12,25 @@ namespace CSharp_HomeWork
 {
     public partial class Homework02_b : Form
     {
+        Homework02_a hwa;
         public Homework02_b()
         {
             InitializeComponent();
+
+        }
+        public Homework02_b(Form A)
+        {
+            InitializeComponent();
+            hwa = (Homework02_a)A;
         }
 
         
 
         private void Homework02_b_Load(object sender, EventArgs e)
-        {
-            Homework02_a hwa = new Homework02_a();
+        {         
             hwa.Monthpay();
             Label lab6 = label6;
-            
+            lab6.Text = hwa.getTarget();
             //lab6.Text = 
         }
     }
