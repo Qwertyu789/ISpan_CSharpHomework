@@ -13,29 +13,17 @@ namespace CSharp_HomeWork
     
     public partial class Homework02_a : Form
     {
-
-
-
-        public int Changeint(string putin)
-        {
-            int changeintresult = Convert.ToInt32(putin);
-            return changeintresult;
-        }
         public Homework02_a()
         {
             InitializeComponent();
-
         }
 
         int Target, TimeLimit, TimeMonth, DP;
         double Rate, Rate00, monthpayrate, TargetR, monthpay;
 
-        private void ReportBut_Click(object sender, EventArgs e)
-        {
+        private String bTarget, bTime, bRate, bmonthpay, btotalpay;
 
-        }
-
-        double Moonthpay()
+        public double Monthpay()
         {
             Target = Convert.ToInt32(TargetTB01.Text);
             TimeLimit = Convert.ToInt32(TimelimitTB01.Text);
@@ -52,19 +40,59 @@ namespace CSharp_HomeWork
             monthpay = TargetR / monthpayrate;
             return monthpay;
         }
+
+        private void ReportBut_Click(object sender, EventArgs e)
+        {
+            Math.Round(Monthpay());          
+            bTarget = TargetTB01.Text;
+            bTime = TimelimitTB01.Text;
+            bRate = RateTB01.Text;
+            TimeLimit = Convert.ToInt32(TimelimitTB01.Text);
+            TimeMonth = TimeLimit * 12;
+            bmonthpay = Math.Round(Monthpay()).ToString();
+            btotalpay = Math.Round((Monthpay()) * TimeMonth).ToString();
+            Homework02_b reportb = new Homework02_b(this);
+            reportb.Show();
+        }
+
+        //public Homework02_a getHomework02_A()
+        //{
+        //    return this;
+        //}
+
         internal void PMTBut_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Math.Round(Moonthpay()).ToString());
+            MessageBox.Show(Math.Round(Monthpay()).ToString());
 }
 
         internal void TotalPayBut_Click(object sender, EventArgs e)
         {
 
-            MessageBox.Show((Math.Round(Moonthpay()) * TimeMonth).ToString());
+            MessageBox.Show((Math.Round(Monthpay()) * TimeMonth).ToString());
 
         }
 
-        
+        public string getTarget()
+        {
+            return bTarget;
+        }
+        public string getTime()
+        {
+            return bTime;
+        }
+        public string getRate()
+        {
+            return bRate;
+        }
+        public string getMonthpay()
+        {
+            return bmonthpay;
+        }
+        public string getTotalpay()
+        {
+            return btotalpay;
+        }
+
 
         /*private void FortestBut_Click(object sender, EventArgs e)
         {
@@ -74,3 +102,4 @@ namespace CSharp_HomeWork
         }*/
     }
 }
+
