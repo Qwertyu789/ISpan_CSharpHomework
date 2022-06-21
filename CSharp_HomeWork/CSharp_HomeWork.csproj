@@ -70,6 +70,12 @@
     <Compile Include="Homework03.Designer.cs">
       <DependentUpon>Homework03.cs</DependentUpon>
     </Compile>
+    <Compile Include="Homework04.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homework04.Designer.cs">
+      <DependentUpon>Homework04.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Homework01.resx">
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Homework03.resx">
       <DependentUpon>Homework03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homework04.resx">
+      <DependentUpon>Homework04.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
