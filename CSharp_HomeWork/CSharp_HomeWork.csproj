@@ -76,6 +76,12 @@
     <Compile Include="Homework04.Designer.cs">
       <DependentUpon>Homework04.cs</DependentUpon>
     </Compile>
+    <Compile Include="Homework05.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homework05.Designer.cs">
+      <DependentUpon>Homework05.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Homework01.resx">
