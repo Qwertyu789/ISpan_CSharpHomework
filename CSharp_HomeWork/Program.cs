@@ -16,7 +16,7 @@ namespace CSharp_HomeWork
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Homework02_a());
+            Application.Run(new Homework03());
         }
     }
 }
