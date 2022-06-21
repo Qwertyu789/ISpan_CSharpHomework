@@ -84,11 +84,7 @@ namespace CSharp_HomeWork
         {
             return bRate;
         }
-<<<<<<< HEAD
         public string getMonthpay()
-=======
-        public string getNonthpay()
->>>>>>> 56efc8d2d283fcbbb7b1bdbc3dc3d0d5870c2632
         {
             return bmonthpay;
         }
@@ -97,13 +93,6 @@ namespace CSharp_HomeWork
             return btotalpay;
         }
 
-
-        /*private void FortestBut_Click(object sender, EventArgs e)
-        {
-            string TargetST = TargetTB01.Text;
-            int Target = Convert.ToInt32(TargetST);
-            MessageBox.Show();
-        }*/
     }
 }
 
