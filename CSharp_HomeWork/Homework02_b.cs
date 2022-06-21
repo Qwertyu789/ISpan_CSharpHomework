@@ -31,6 +31,7 @@ namespace CSharp_HomeWork
             hwa.Monthpay();
             Label lab6 = label6;
             lab6.Text = hwa.getTarget();
+<<<<<<< HEAD
             Label lab7 = label7;
             lab7.Text = hwa.getTime();
             Label lab8 = label8;
@@ -40,6 +41,8 @@ namespace CSharp_HomeWork
             Label lab10 = label10;
             lab10.Text = hwa.getTotalpay();
 
+=======
+>>>>>>> 56efc8d2d283fcbbb7b1bdbc3dc3d0d5870c2632
             //lab6.Text = 
         }
     }

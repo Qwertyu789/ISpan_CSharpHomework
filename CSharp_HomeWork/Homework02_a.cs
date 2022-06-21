@@ -84,7 +84,11 @@ namespace CSharp_HomeWork
         {
             return bRate;
         }
+<<<<<<< HEAD
         public string getMonthpay()
+=======
+        public string getNonthpay()
+>>>>>>> 56efc8d2d283fcbbb7b1bdbc3dc3d0d5870c2632
         {
             return bmonthpay;
         }
