@@ -44,25 +44,29 @@ namespace CSharp_HomeWork
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.lbScoreList = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbScoreList
             // 
             this.tbScoreList.BackColor = System.Drawing.SystemColors.Control;
-            this.tbScoreList.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbScoreList.Enabled = false;
+            this.tbScoreList.Font = new System.Drawing.Font("標楷體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbScoreList.Location = new System.Drawing.Point(155, 12);
             this.tbScoreList.Multiline = true;
             this.tbScoreList.Name = "tbScoreList";
-            this.tbScoreList.Size = new System.Drawing.Size(385, 305);
+            this.tbScoreList.ReadOnly = true;
+            this.tbScoreList.Size = new System.Drawing.Size(369, 305);
             this.tbScoreList.TabIndex = 0;
             // 
             // tbAvgClass
             // 
             this.tbAvgClass.BackColor = System.Drawing.SystemColors.Control;
+            this.tbAvgClass.Enabled = false;
             this.tbAvgClass.Location = new System.Drawing.Point(155, 323);
             this.tbAvgClass.Multiline = true;
             this.tbAvgClass.Name = "tbAvgClass";
-            this.tbAvgClass.Size = new System.Drawing.Size(385, 78);
+            this.tbAvgClass.Size = new System.Drawing.Size(369, 78);
             this.tbAvgClass.TabIndex = 1;
             // 
             // lbName
@@ -188,11 +192,21 @@ namespace CSharp_HomeWork
             this.button5.Text = "隨機加入20筆";
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // lbScoreList
+            // 
+            this.lbScoreList.AutoSize = true;
+            this.lbScoreList.Font = new System.Drawing.Font("標楷體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbScoreList.Location = new System.Drawing.Point(155, 15);
+            this.lbScoreList.Name = "lbScoreList";
+            this.lbScoreList.Size = new System.Drawing.Size(0, 13);
+            this.lbScoreList.TabIndex = 15;
+            // 
             // Homework05
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 411);
+            this.ClientSize = new System.Drawing.Size(533, 411);
+            this.Controls.Add(this.lbScoreList);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -210,6 +224,7 @@ namespace CSharp_HomeWork
             this.Controls.Add(this.tbScoreList);
             this.Name = "Homework05";
             this.Text = "Homework05";
+            this.Load += new System.EventHandler(this.Homework05_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,5 +247,6 @@ namespace CSharp_HomeWork
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label lbScoreList;
     }
 }
