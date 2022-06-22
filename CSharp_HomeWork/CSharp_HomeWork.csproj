@@ -99,6 +99,9 @@
     <EmbeddedResource Include="Homework04.resx">
       <DependentUpon>Homework04.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Homework05.resx">
+      <DependentUpon>Homework05.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
