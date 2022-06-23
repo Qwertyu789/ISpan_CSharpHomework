@@ -29,8 +29,6 @@ namespace CSharp_HomeWork
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbScoreList = new System.Windows.Forms.TextBox();
-            this.tbAvgClass = new System.Windows.Forms.TextBox();
             this.lbName = new System.Windows.Forms.Label();
             this.lbCht = new System.Windows.Forms.Label();
             this.lbEng = new System.Windows.Forms.Label();
@@ -45,29 +43,11 @@ namespace CSharp_HomeWork
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.lbScoreList = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tbScoreList
-            // 
-            this.tbScoreList.BackColor = System.Drawing.SystemColors.Control;
-            this.tbScoreList.Enabled = false;
-            this.tbScoreList.Font = new System.Drawing.Font("標楷體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbScoreList.Location = new System.Drawing.Point(155, 12);
-            this.tbScoreList.Multiline = true;
-            this.tbScoreList.Name = "tbScoreList";
-            this.tbScoreList.ReadOnly = true;
-            this.tbScoreList.Size = new System.Drawing.Size(369, 305);
-            this.tbScoreList.TabIndex = 0;
-            // 
-            // tbAvgClass
-            // 
-            this.tbAvgClass.BackColor = System.Drawing.SystemColors.Control;
-            this.tbAvgClass.Enabled = false;
-            this.tbAvgClass.Location = new System.Drawing.Point(155, 323);
-            this.tbAvgClass.Multiline = true;
-            this.tbAvgClass.Name = "tbAvgClass";
-            this.tbAvgClass.Size = new System.Drawing.Size(369, 78);
-            this.tbAvgClass.TabIndex = 1;
             // 
             // lbName
             // 
@@ -161,6 +141,7 @@ namespace CSharp_HomeWork
             this.button2.TabIndex = 11;
             this.button2.Text = "隨機儲存資料";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -171,6 +152,7 @@ namespace CSharp_HomeWork
             this.button3.TabIndex = 12;
             this.button3.Text = "各科統計";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -181,6 +163,7 @@ namespace CSharp_HomeWork
             this.button4.TabIndex = 13;
             this.button4.Text = "重設所有資料";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -191,22 +174,40 @@ namespace CSharp_HomeWork
             this.button5.TabIndex = 14;
             this.button5.Text = "隨機加入20筆";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // lbScoreList
             // 
+            this.lbScoreList.AutoEllipsis = true;
             this.lbScoreList.AutoSize = true;
             this.lbScoreList.Font = new System.Drawing.Font("標楷體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbScoreList.Location = new System.Drawing.Point(155, 15);
+            this.lbScoreList.Location = new System.Drawing.Point(3, 0);
             this.lbScoreList.Name = "lbScoreList";
-            this.lbScoreList.Size = new System.Drawing.Size(0, 13);
+            this.lbScoreList.Size = new System.Drawing.Size(49, 13);
             this.lbScoreList.TabIndex = 15;
+            this.lbScoreList.Text = "222222";
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Location = new System.Drawing.Point(155, 20);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.AutoScroll = true;
+            this.splitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.splitContainer1.Panel1.Controls.Add(this.lbScoreList);
+            this.splitContainer1.Size = new System.Drawing.Size(376, 380);
+            this.splitContainer1.SplitterDistance = 261;
+            this.splitContainer1.TabIndex = 16;
             // 
             // Homework05
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 411);
-            this.Controls.Add(this.lbScoreList);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -220,20 +221,18 @@ namespace CSharp_HomeWork
             this.Controls.Add(this.lbEng);
             this.Controls.Add(this.lbCht);
             this.Controls.Add(this.lbName);
-            this.Controls.Add(this.tbAvgClass);
-            this.Controls.Add(this.tbScoreList);
             this.Name = "Homework05";
             this.Text = "Homework05";
-            this.Load += new System.EventHandler(this.Homework05_Load);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox tbScoreList;
-        private System.Windows.Forms.TextBox tbAvgClass;
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label lbCht;
         private System.Windows.Forms.Label lbEng;
@@ -248,5 +247,6 @@ namespace CSharp_HomeWork
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label lbScoreList;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }
