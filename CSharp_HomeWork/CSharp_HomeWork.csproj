@@ -82,7 +82,18 @@
     <Compile Include="Homework05.Designer.cs">
       <DependentUpon>Homework05.cs</DependentUpon>
     </Compile>
-    <Compile Include="Homework05_Student.cs" />
+    <Compile Include="Homework06.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homework06.Designer.cs">
+      <DependentUpon>Homework06.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Homework07.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homework07.Designer.cs">
+      <DependentUpon>Homework07.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Homework01.resx">
@@ -102,6 +113,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Homework05.resx">
       <DependentUpon>Homework05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homework06.resx">
+      <DependentUpon>Homework06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homework07.resx">
+      <DependentUpon>Homework07.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

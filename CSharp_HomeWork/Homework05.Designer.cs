@@ -44,8 +44,10 @@ namespace CSharp_HomeWork
             this.button5 = new System.Windows.Forms.Button();
             this.lbScoreList = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.lbTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,6 +147,7 @@ namespace CSharp_HomeWork
             // 
             // button3
             // 
+            this.button3.Enabled = false;
             this.button3.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button3.Location = new System.Drawing.Point(16, 260);
             this.button3.Name = "button3";
@@ -183,9 +186,8 @@ namespace CSharp_HomeWork
             this.lbScoreList.Font = new System.Drawing.Font("標楷體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbScoreList.Location = new System.Drawing.Point(3, 0);
             this.lbScoreList.Name = "lbScoreList";
-            this.lbScoreList.Size = new System.Drawing.Size(49, 13);
+            this.lbScoreList.Size = new System.Drawing.Size(0, 13);
             this.lbScoreList.TabIndex = 15;
-            this.lbScoreList.Text = "222222";
             // 
             // splitContainer1
             // 
@@ -198,15 +200,27 @@ namespace CSharp_HomeWork
             this.splitContainer1.Panel1.AutoScroll = true;
             this.splitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.splitContainer1.Panel1.Controls.Add(this.lbScoreList);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.lbTotal);
             this.splitContainer1.Size = new System.Drawing.Size(376, 380);
-            this.splitContainer1.SplitterDistance = 261;
+            this.splitContainer1.SplitterDistance = 273;
             this.splitContainer1.TabIndex = 16;
+            // 
+            // lbTotal
+            // 
+            this.lbTotal.AutoSize = true;
+            this.lbTotal.Location = new System.Drawing.Point(4, 0);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(0, 12);
+            this.lbTotal.TabIndex = 0;
             // 
             // Homework05
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 411);
+            this.ClientSize = new System.Drawing.Size(538, 409);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -225,6 +239,8 @@ namespace CSharp_HomeWork
             this.Text = "Homework05";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -248,5 +264,6 @@ namespace CSharp_HomeWork
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label lbScoreList;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Label lbTotal;
     }
 }
