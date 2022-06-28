@@ -45,7 +45,7 @@ namespace CSharp_HomeWork
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbResult = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -104,6 +104,7 @@ namespace CSharp_HomeWork
             this.button4.Text = "陣列arr0711_Srt[]最長的名字\r\n";
             this.button4.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -200,24 +201,24 @@ namespace CSharp_HomeWork
             this.label2.TabIndex = 15;
             this.label2.Text = "Result :";
             // 
-            // label3
+            // lbResult
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.Info;
-            this.label3.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label3.Location = new System.Drawing.Point(22, 251);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 16);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "結果";
+            this.lbResult.AutoSize = true;
+            this.lbResult.BackColor = System.Drawing.SystemColors.Info;
+            this.lbResult.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbResult.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lbResult.Location = new System.Drawing.Point(22, 251);
+            this.lbResult.Name = "lbResult";
+            this.lbResult.Size = new System.Drawing.Size(40, 16);
+            this.lbResult.TabIndex = 16;
+            this.lbResult.Text = "結果";
             // 
             // Homework08
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbResult);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
@@ -259,6 +260,6 @@ namespace CSharp_HomeWork
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbResult;
     }
 }
