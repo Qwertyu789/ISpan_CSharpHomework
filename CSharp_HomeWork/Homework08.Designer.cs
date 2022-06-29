@@ -74,6 +74,7 @@ namespace CSharp_HomeWork
             this.button1.Text = "輸入的數字為奇數\r\n或偶數？";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -83,6 +84,7 @@ namespace CSharp_HomeWork
             this.button2.TabIndex = 3;
             this.button2.Text = "陣列arr0711[]最大/小值";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -115,6 +117,7 @@ namespace CSharp_HomeWork
             this.button5.Text = "[10,10]二維陣列-邊1,內0";
             this.button5.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -125,6 +128,7 @@ namespace CSharp_HomeWork
             this.button6.Text = "[10,10]二維陣列-邊0,內1";
             this.button6.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -135,6 +139,7 @@ namespace CSharp_HomeWork
             this.button7.Text = "[10,10]二維陣列\r\n101010\r\n010101\r\n\r\n...\r\n";
             this.button7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -181,6 +186,7 @@ namespace CSharp_HomeWork
             this.button12.Text = "陣列arr0711_Srt[]xue\"C\" or \"c\" 的字樣有哪個";
             this.button12.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button13
             // 
@@ -190,6 +196,7 @@ namespace CSharp_HomeWork
             this.button13.TabIndex = 14;
             this.button13.Text = "清空結果欄";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // label2
             // 
