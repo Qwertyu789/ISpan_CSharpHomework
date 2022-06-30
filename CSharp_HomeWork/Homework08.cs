@@ -99,16 +99,96 @@ namespace CSharp_HomeWork
         //[10,10] 邊1內0
         private void button5_Click(object sender, EventArgs e)
         {
-            array
+            int[,] stock = new int[10, 10];
+            lbResult.Text = "";
+            //先給值
+            for (int i = 0;i<10;i++) 
+            {
+                for(int j = 0; j <10; j++)
+                {
+                    if ((i % 9) * (j % 9) == 0)
+                    {
+                        stock[i, j] = 1;
+                    }
+                    else
+                    {
+                        stock[i, j] = 0;
+                    }
+                }                
+            }
+            //畫圖
+            for(int i = 0; i < 10; i++)
+            {
+                for(int j = 0; j < 10; j++)
+                {
+                    lbResult.Text += stock[i, j]+" ";
+                }
+                lbResult.Text += "\r\n";
+            }           
+            
         }
+        
         //[10,10] 邊0內1
         private void button6_Click(object sender, EventArgs e)
         {
+            int[,] stock = new int[10, 10];
+            lbResult.Text = "";
+            //先給值
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if ((i % 9) * (j % 9) == 0)
+                    {
+                        stock[i, j] = 0;
+                    }
+                    else
+                    {
+                        stock[i, j] = 1;
+                    }
+                }
+            }
+            //畫圖
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    lbResult.Text += stock[i, j] + " ";
+                }
+                lbResult.Text += "\r\n";
+            }
 
         }
         //[10,10] 101010
         private void button7_Click(object sender, EventArgs e)
         {
+            int[,] stock = new int[10, 10];
+            lbResult.Text = "";
+            //先給值
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if ((i % 9) * (j % 9) == 0)
+                    {
+                        stock[i, j] = 1;
+                    }
+                    else
+                    {
+                        stock[i, j] = 0;
+                    }
+                }
+            }
+            //畫圖
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    lbResult.Text += stock[i, j] + " ";
+                }
+                lbResult.Text += "\r\n";
+            }
+
 
         }
     }
