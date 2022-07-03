@@ -46,6 +46,21 @@ namespace CSharp_HomeWork
             this.button13 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lbResult = new System.Windows.Forms.Label();
+            this.tbRows = new System.Windows.Forms.TextBox();
+            this.tbFrom = new System.Windows.Forms.TextBox();
+            this.tbTo = new System.Windows.Forms.TextBox();
+            this.tbStep = new System.Windows.Forms.TextBox();
+            this.lbFrom = new System.Windows.Forms.Label();
+            this.lbTo = new System.Windows.Forms.Label();
+            this.lbStep = new System.Windows.Forms.Label();
+            this.lbRows = new System.Windows.Forms.Label();
+            this.btnFor = new System.Windows.Forms.Button();
+            this.btnWhile = new System.Windows.Forms.Button();
+            this.btnDo = new System.Windows.Forms.Button();
+            this.btnTree = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.btnLottery = new System.Windows.Forms.Button();
+            this.btn100 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -149,6 +164,7 @@ namespace CSharp_HomeWork
             this.button8.TabIndex = 9;
             this.button8.Text = "Swap[int , int]";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -158,6 +174,7 @@ namespace CSharp_HomeWork
             this.button9.TabIndex = 10;
             this.button9.Text = "Sun(陣列arr0711[])";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -167,6 +184,7 @@ namespace CSharp_HomeWork
             this.button10.TabIndex = 11;
             this.button10.Text = "Max(陣列arr0711[])";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -176,6 +194,7 @@ namespace CSharp_HomeWork
             this.button11.TabIndex = 12;
             this.button11.Text = "Min(陣列arr0711[])";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
@@ -212,7 +231,7 @@ namespace CSharp_HomeWork
             // 
             this.lbResult.AutoSize = true;
             this.lbResult.BackColor = System.Drawing.SystemColors.Info;
-            this.lbResult.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbResult.Font = new System.Drawing.Font("細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbResult.ForeColor = System.Drawing.Color.OrangeRed;
             this.lbResult.Location = new System.Drawing.Point(22, 251);
             this.lbResult.Name = "lbResult";
@@ -220,11 +239,171 @@ namespace CSharp_HomeWork
             this.lbResult.TabIndex = 16;
             this.lbResult.Text = "結果";
             // 
+            // tbRows
+            // 
+            this.tbRows.Location = new System.Drawing.Point(498, 135);
+            this.tbRows.Name = "tbRows";
+            this.tbRows.Size = new System.Drawing.Size(58, 22);
+            this.tbRows.TabIndex = 17;
+            // 
+            // tbFrom
+            // 
+            this.tbFrom.Location = new System.Drawing.Point(321, 149);
+            this.tbFrom.Name = "tbFrom";
+            this.tbFrom.Size = new System.Drawing.Size(58, 22);
+            this.tbFrom.TabIndex = 18;
+            // 
+            // tbTo
+            // 
+            this.tbTo.Location = new System.Drawing.Point(321, 178);
+            this.tbTo.Name = "tbTo";
+            this.tbTo.Size = new System.Drawing.Size(58, 22);
+            this.tbTo.TabIndex = 19;
+            // 
+            // tbStep
+            // 
+            this.tbStep.Location = new System.Drawing.Point(321, 206);
+            this.tbStep.Name = "tbStep";
+            this.tbStep.Size = new System.Drawing.Size(58, 22);
+            this.tbStep.TabIndex = 20;
+            // 
+            // lbFrom
+            // 
+            this.lbFrom.AutoSize = true;
+            this.lbFrom.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbFrom.Location = new System.Drawing.Point(272, 149);
+            this.lbFrom.Name = "lbFrom";
+            this.lbFrom.Size = new System.Drawing.Size(43, 17);
+            this.lbFrom.TabIndex = 21;
+            this.lbFrom.Text = "From:";
+            // 
+            // lbTo
+            // 
+            this.lbTo.AutoSize = true;
+            this.lbTo.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbTo.Location = new System.Drawing.Point(289, 178);
+            this.lbTo.Name = "lbTo";
+            this.lbTo.Size = new System.Drawing.Size(26, 17);
+            this.lbTo.TabIndex = 22;
+            this.lbTo.Text = "To:";
+            // 
+            // lbStep
+            // 
+            this.lbStep.AutoSize = true;
+            this.lbStep.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbStep.Location = new System.Drawing.Point(277, 206);
+            this.lbStep.Name = "lbStep";
+            this.lbStep.Size = new System.Drawing.Size(38, 17);
+            this.lbStep.TabIndex = 23;
+            this.lbStep.Text = "Step:";
+            // 
+            // lbRows
+            // 
+            this.lbRows.AutoSize = true;
+            this.lbRows.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbRows.Location = new System.Drawing.Point(449, 135);
+            this.lbRows.Name = "lbRows";
+            this.lbRows.Size = new System.Drawing.Size(43, 17);
+            this.lbRows.TabIndex = 24;
+            this.lbRows.Text = "Rows:";
+            // 
+            // btnFor
+            // 
+            this.btnFor.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnFor.Location = new System.Drawing.Point(385, 149);
+            this.btnFor.Name = "btnFor";
+            this.btnFor.Size = new System.Drawing.Size(46, 23);
+            this.btnFor.TabIndex = 25;
+            this.btnFor.Text = "for";
+            this.btnFor.UseVisualStyleBackColor = false;
+            this.btnFor.Click += new System.EventHandler(this.btnFor_Click);
+            // 
+            // btnWhile
+            // 
+            this.btnWhile.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnWhile.Location = new System.Drawing.Point(385, 178);
+            this.btnWhile.Name = "btnWhile";
+            this.btnWhile.Size = new System.Drawing.Size(46, 23);
+            this.btnWhile.TabIndex = 26;
+            this.btnWhile.Text = "while";
+            this.btnWhile.UseVisualStyleBackColor = false;
+            this.btnWhile.Click += new System.EventHandler(this.btnWhile_Click);
+            // 
+            // btnDo
+            // 
+            this.btnDo.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnDo.Location = new System.Drawing.Point(385, 205);
+            this.btnDo.Name = "btnDo";
+            this.btnDo.Size = new System.Drawing.Size(46, 23);
+            this.btnDo.TabIndex = 27;
+            this.btnDo.Text = "do";
+            this.btnDo.UseVisualStyleBackColor = false;
+            this.btnDo.Click += new System.EventHandler(this.btnDo_Click);
+            // 
+            // btnTree
+            // 
+            this.btnTree.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnTree.Location = new System.Drawing.Point(487, 166);
+            this.btnTree.Name = "btnTree";
+            this.btnTree.Size = new System.Drawing.Size(84, 23);
+            this.btnTree.TabIndex = 28;
+            this.btnTree.Text = "直角聖誕樹";
+            this.btnTree.UseVisualStyleBackColor = false;
+            this.btnTree.Click += new System.EventHandler(this.btnTree_Click);
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button14.Location = new System.Drawing.Point(487, 195);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(84, 33);
+            this.button14.TabIndex = 29;
+            this.button14.Text = "九九乘法表";
+            this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // btnLottery
+            // 
+            this.btnLottery.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnLottery.Location = new System.Drawing.Point(577, 166);
+            this.btnLottery.Name = "btnLottery";
+            this.btnLottery.Size = new System.Drawing.Size(107, 23);
+            this.btnLottery.TabIndex = 30;
+            this.btnLottery.Text = "樂透int[]號碼不重複";
+            this.btnLottery.UseVisualStyleBackColor = false;
+            this.btnLottery.Click += new System.EventHandler(this.btnLottery_Click);
+            // 
+            // btn100
+            // 
+            this.btn100.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btn100.Location = new System.Drawing.Point(577, 137);
+            this.btn100.Name = "btn100";
+            this.btn100.Size = new System.Drawing.Size(107, 23);
+            this.btn100.TabIndex = 31;
+            this.btn100.Text = "100的二進位是？";
+            this.btn100.UseVisualStyleBackColor = false;
+            this.btn100.Click += new System.EventHandler(this.btn100_Click);
+            // 
             // Homework08
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(761, 450);
+            this.Controls.Add(this.btn100);
+            this.Controls.Add(this.btnLottery);
+            this.Controls.Add(this.button14);
+            this.Controls.Add(this.btnTree);
+            this.Controls.Add(this.btnDo);
+            this.Controls.Add(this.btnWhile);
+            this.Controls.Add(this.btnFor);
+            this.Controls.Add(this.lbRows);
+            this.Controls.Add(this.lbStep);
+            this.Controls.Add(this.lbTo);
+            this.Controls.Add(this.lbFrom);
+            this.Controls.Add(this.tbStep);
+            this.Controls.Add(this.tbTo);
+            this.Controls.Add(this.tbFrom);
+            this.Controls.Add(this.tbRows);
             this.Controls.Add(this.lbResult);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button13);
@@ -268,5 +447,20 @@ namespace CSharp_HomeWork
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbResult;
+        private System.Windows.Forms.TextBox tbRows;
+        private System.Windows.Forms.TextBox tbFrom;
+        private System.Windows.Forms.TextBox tbTo;
+        private System.Windows.Forms.TextBox tbStep;
+        private System.Windows.Forms.Label lbFrom;
+        private System.Windows.Forms.Label lbTo;
+        private System.Windows.Forms.Label lbStep;
+        private System.Windows.Forms.Label lbRows;
+        private System.Windows.Forms.Button btnFor;
+        private System.Windows.Forms.Button btnWhile;
+        private System.Windows.Forms.Button btnDo;
+        private System.Windows.Forms.Button btnTree;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button btnLottery;
+        private System.Windows.Forms.Button btn100;
     }
 }
