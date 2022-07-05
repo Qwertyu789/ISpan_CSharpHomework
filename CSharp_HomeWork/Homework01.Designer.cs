@@ -128,12 +128,12 @@ namespace CSharp_HomeWork
             this.SignTB.Size = new System.Drawing.Size(100, 22);
             this.SignTB.TabIndex = 9;
             // 
-            // Form1
+            // Homework01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(390, 386);
             this.Controls.Add(this.SignTB);
             this.Controls.Add(this.GenderTB);
             this.Controls.Add(this.NameENTB);
@@ -144,7 +144,7 @@ namespace CSharp_HomeWork
             this.Controls.Add(this.GenderLb);
             this.Controls.Add(this.NameENLb);
             this.Controls.Add(this.NameCNLb);
-            this.Name = "Form1";
+            this.Name = "Homework01";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

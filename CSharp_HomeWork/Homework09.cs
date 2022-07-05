@@ -14,32 +14,43 @@ namespace CSharp_HomeWork
     {
         List<int> Oline = new List<int>(), Xline = new List<int>();
         Button[] OXBtns = new Button[9];
-        Boolean isGameOver = false;
         Boolean XorO = false;
-        int[,] wincondition = new int[8,3]
+
+        //不規則陣列
+        int[][] wincondition = new int[][]
         {
-            { 1, 2, 3 },
-            { 4, 5, 6 },
-            { 7, 8, 9 },
-            { 1, 4, 7 },
-            { 2, 5, 8 },
-            { 3, 6, 9 },
-            { 1, 5, 9 },
-            { 7, 5, 3 }
+            new int[] { 1, 2, 3 },
+            new int[] { 4, 5, 6 },
+            new int[] { 7, 8, 9 },
+            new int[] { 1, 4, 7 },
+            new int[] { 2, 5, 8 },
+            new int[] { 3, 6, 9 },
+            new int[] { 1, 5, 9 },
+            new int[] { 7, 5, 3 }
         };
-        //預先載入
+        
         public Homework09()
-        {
-            OXBtns = new Button[9] { button1, button2, button3, button4, button5, button6, button7, button8, button9 };
+        {                       
             InitializeComponent();
         }
-        //遊戲開始
-        void GameStart()
+        //按鍵判定
+        private void setKeyDown(object sender, KeyEventArgs e)
         {
-            isGameOver = false;
-            XorO = true;
+            if(e.KeyValue == 82)
+            {
+                button10.PerformClick();
+            }
+            if(e.KeyValue == 27)
+            {
+                button11.PerformClick();
+            }
         }
-        
+
+        //找尋配對
+        bool checkpair(List<int> ls,int[] ar )
+        {
+            return ls.Contains(ar[0]) && ls.Contains(ar[1]) && ls.Contains(ar[2]);
+        }        
         //點OX
         void BtnClick(object sender, EventArgs e)
         {
@@ -55,62 +66,59 @@ namespace CSharp_HomeWork
             }
             OXBtns[num - 1].Text = XorO ? "O" : "X";
             XorO = !XorO;
-
+            Checkwinner();
         }
-
         //檢查贏家
         void Checkwinner()
         {
-
+            for(int i = 0; i < 8; i++)
+            {
+                if (checkpair(Oline, wincondition[i]))
+                {
+                    MessageBox.Show($"O贏，請重新開始");
+                    setReset();
+                }
+                else if(checkpair(Xline , wincondition[i]))
+                {
+                    MessageBox.Show($"X贏，請重新開始");
+                    setReset();
+                }
+            }
+            if (Oline.Count + Xline.Count == 9)
+            {
+                MessageBox.Show($"平手，請重新開始");
+                setReset();
+            }
         }
-
-        //
-
-
-
-        private void button1_Click(object sender, EventArgs e)
+        //載入
+        private void Homework09_Load(object sender, EventArgs e)
         {
-
+            OXBtns = new Button[9] { button1, button2, button3, button4, button5, button6, button7, button8, button9 };
+            setReset();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button10_Click(object sender, EventArgs e)
         {
-
+            setReset();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button11_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        //重新開始
+        void setReset()
         {
-
+            for(int i =0; i < 9; i++)
+            {
+                OXBtns[i].Enabled = true;
+                OXBtns[i].Text = "";                
+            }
+            Oline.Clear();
+            Xline.Clear();
+            XorO = false;
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

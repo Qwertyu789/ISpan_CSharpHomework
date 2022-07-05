@@ -39,6 +39,7 @@ namespace CSharp_HomeWork
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -141,11 +142,22 @@ namespace CSharp_HomeWork
             this.label10.TabIndex = 9;
             this.label10.Text = "label10";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button1.Location = new System.Drawing.Point(397, 372);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(132, 54);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "EMAIL";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Homework02_b
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(558, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -176,5 +188,6 @@ namespace CSharp_HomeWork
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button1;
     }
 }

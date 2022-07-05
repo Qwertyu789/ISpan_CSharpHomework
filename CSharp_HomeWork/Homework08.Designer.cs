@@ -388,7 +388,7 @@ namespace CSharp_HomeWork
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(761, 450);
+            this.ClientSize = new System.Drawing.Size(698, 450);
             this.Controls.Add(this.btn100);
             this.Controls.Add(this.btnLottery);
             this.Controls.Add(this.button14);
