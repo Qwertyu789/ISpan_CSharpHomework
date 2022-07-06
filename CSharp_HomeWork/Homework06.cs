@@ -106,9 +106,9 @@ namespace CSharp_HomeWork
                 sumCht += arraystu[i].Cht;
                 sumEng += arraystu[i].Eng;
                 sumMath += arraystu[i].Math;
-                avgCht = Math.Round((sumCht / (double)i), 1);
-                avgEng = Math.Round((sumEng / (double)i), 1);
-                avgMath = Math.Round((sumMath / (double)i), 1);
+                avgCht = Math.Round((sumCht / Convert.ToDouble(counter)), 1);
+                avgEng = Math.Round((sumEng / Convert.ToDouble(counter)), 1);
+                avgMath = Math.Round((sumMath / Convert.ToDouble(counter)), 1);
 
                 //查科目最高最低                
                 comCht.Add(arraystu[i].Cht);
@@ -124,8 +124,8 @@ namespace CSharp_HomeWork
                 //顯示在統計版上
                 lbTotal.Text = $"{"總分",-4}　{sumCht,ww + 1}　{sumEng,ww + 3}　{sumMath,ww + 3} " +
                     $"\r\n{"平均",-4}　{avgCht,ww + 1}　{avgEng,ww + 3}　{avgMath,ww + 3} " +
-                    $"\r\n{"最高分",-5}{maxCht,ww + 1}　{naxEng,ww + 3}　{maxMath,ww + 5} " +
-                    $"\r\n{"最低分",-5}{minCht,ww + 1}　{minEng,ww + 3}　{minMath,ww + 5} ";
+                    $"\r\n{"最高分",-5}{maxCht,ww + 1}　{naxEng,ww + 3}　{maxMath,ww + 3} " +
+                    $"\r\n{"最低分",-5}{minCht,ww + 1}　{minEng,ww + 3}　{minMath,ww + 3} ";
             }
         }
         //增加學生資料

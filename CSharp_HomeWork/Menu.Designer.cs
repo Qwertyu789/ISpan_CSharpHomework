@@ -32,6 +32,7 @@ namespace CSharp_HomeWork
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.spC = new System.Windows.Forms.SplitContainer();
             this.spC2 = new System.Windows.Forms.SplitContainer();
+            this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -40,7 +41,7 @@ namespace CSharp_HomeWork
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.spC)).BeginInit();
             this.spC.Panel2.SuspendLayout();
             this.spC.SuspendLayout();
@@ -82,6 +83,7 @@ namespace CSharp_HomeWork
             // 
             this.spC2.Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("spC2.Panel1.BackgroundImage")));
             this.spC2.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.spC2.Panel1.Controls.Add(this.button10);
             this.spC2.Panel1.Controls.Add(this.button9);
             this.spC2.Panel1.Controls.Add(this.button8);
             this.spC2.Panel1.Controls.Add(this.button7);
@@ -103,6 +105,19 @@ namespace CSharp_HomeWork
             this.spC2.Size = new System.Drawing.Size(1243, 569);
             this.spC2.SplitterDistance = 265;
             this.spC2.TabIndex = 0;
+            // 
+            // button9
+            // 
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button9.Location = new System.Drawing.Point(3, 243);
+            this.button9.Margin = new System.Windows.Forms.Padding(0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(257, 30);
+            this.button9.TabIndex = 8;
+            this.button9.Text = "XOGame";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -208,18 +223,18 @@ namespace CSharp_HomeWork
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button9
+            // button10
             // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button9.Location = new System.Drawing.Point(3, 243);
-            this.button9.Margin = new System.Windows.Forms.Padding(0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(257, 30);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "XOGame";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button10.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button10.Location = new System.Drawing.Point(3, 273);
+            this.button10.Margin = new System.Windows.Forms.Padding(0);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(257, 30);
+            this.button10.TabIndex = 9;
+            this.button10.Text = "螢幕保護程式";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // Menu
             // 
@@ -252,5 +267,6 @@ namespace CSharp_HomeWork
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
     }
 }

@@ -27,5 +27,16 @@ namespace CSharp_HomeWork
             MessageBox.Show("Hi！我是 " + CNName + "\n英文名字是：" + ENName + "\n性別是：" + Gender + "\n星座是：" + Sign + "\n很高興認識你們！");
 
         }
+
+        private void HelloBut_Click(object sender, EventArgs e)
+        {
+            string CNName = NameCNTB.Text;
+            string ENName = NameENTB.Text;
+            string Gender = GenderTB.Text;
+            string Sign = SignTB.Text;
+
+            MessageBox.Show("Hello！我是 " + CNName + "\n英文名字是：" + ENName + "\n性別是：" + Gender + "\n星座是：" + Sign + "\n很高興認識你們！");
+
+        }
     }
 }

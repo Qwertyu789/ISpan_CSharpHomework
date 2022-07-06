@@ -31,21 +31,25 @@ namespace CSharp_HomeWork
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homework10));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pboxO = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxO)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pboxO
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(323, 259);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pboxO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pboxO.Image = ((System.Drawing.Image)(resources.GetObject("pboxO.Image")));
+            this.pboxO.Location = new System.Drawing.Point(877, 12);
+            this.pboxO.Name = "pboxO";
+            this.pboxO.Size = new System.Drawing.Size(323, 259);
+            this.pboxO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboxO.TabIndex = 0;
+            this.pboxO.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Homework10
             // 
@@ -53,20 +57,21 @@ namespace CSharp_HomeWork
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1224, 637);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pboxO);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Homework10";
             this.Text = "Homework10";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Homework10_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Click += new System.EventHandler(this.Homework10_Click);
+            ((System.ComponentModel.ISupportInitialize)(this.pboxO)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pboxO;
         private System.Windows.Forms.Timer timer1;
     }
 }

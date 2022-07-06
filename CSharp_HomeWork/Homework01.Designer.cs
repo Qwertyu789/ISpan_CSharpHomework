@@ -99,6 +99,7 @@ namespace CSharp_HomeWork
             this.HelloBut.TabIndex = 5;
             this.HelloBut.Text = "Hello";
             this.HelloBut.UseVisualStyleBackColor = true;
+            this.HelloBut.Click += new System.EventHandler(this.HelloBut_Click);
             // 
             // NameCNTB
             // 

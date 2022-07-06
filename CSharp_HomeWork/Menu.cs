@@ -98,5 +98,12 @@ namespace CSharp_HomeWork
             spC2.Panel2.Controls.Add(hw);
             hw.Show();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            spC2.Panel2.Controls.Clear();
+            Homework10 hw = new Homework10();
+            hw.Show();
+        }
     }
 }
